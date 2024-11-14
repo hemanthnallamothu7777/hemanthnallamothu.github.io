@@ -34,14 +34,14 @@ $('.menu-btn').click(function(){
 
 // typing text animation script
 var typed = new Typed(".typing", {
-    strings: [ "React Developer" ,"Javascript Developer","React Native"],
+    strings: [ "React Developer" ,"Javascript Developer","React Native Developer"],
     typeSpeed: 100,
     backSpeed: 60,
     loop: true
 });
 
 var typed = new Typed(".typing-2", {
-    strings: [ "React Developer" ,"Javascript Developer","React Native"],
+    strings: [ "React Developer" ,"Javascript Developer","React Native Developer"],
     typeSpeed: 100,
     backSpeed: 60,
     loop: true

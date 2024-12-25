@@ -256,12 +256,13 @@ section .title::after {
 
 .about {
     margin-top: 5px;
-    background: linear-gradient(45deg, #ff7eb3, #ff758c, #a29bfe);
+    /* background: linear-gradient(45deg, #ff7eb3, #ff758c, #a29bfe); */
 }
 
 .about .about-content .left {
     width: 45%;
-
+    backdrop-filter: linear-gradient(45deg, #ff7eb3, #ff758c, #a29bfe);
+    ;
 }
 
 .about .about-content .left img {
@@ -271,6 +272,12 @@ section .title::after {
     border-radius: 10px;
 
 }
+
+.about .about-content .left img:hover {
+    transform: scale(1.01) rotate(0deg);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
 
 .about .about-content .right {
     width: 55%;
@@ -306,6 +313,7 @@ section .title::after {
 .about .about-content .right a:hover {
     color: #FFC94A;
     background: none;
+
 }
 
 /* services section styling */
@@ -371,6 +379,8 @@ section .title::after {
     padding: 2em;
     transition: transform 0.4s ease;
     margin: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
 }
 
 .card .card-content {
@@ -427,7 +437,9 @@ section .title::after {
 
 .card:hover {
     cursor: pointer;
-    transform: scale(0.97);
+    transform: scale(0.9, 0.9);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
 }
 
 .card:hover .card-content {
@@ -440,6 +452,7 @@ section .title::after {
 
 .card:active {
     transform: scale(0.9);
+
 }
 
 /* card end */
@@ -473,6 +486,7 @@ section .title::after {
 .skills .skills-content .left a:hover {
     color: #FFC94A;
     background: none;
+    transform: scale(0.9, 0.9);
 }
 
 .skills .skills-content .right .bars {
@@ -823,6 +837,15 @@ footer span a:hover {
 
 /* work experience  */
 
+
+
+.experience-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
 .work-experience {
     padding: 50px 0;
 
@@ -830,54 +853,64 @@ footer span a:hover {
         max-width: 1200px;
         margin: auto;
     }
+}
 
-    .title {
-        text-align: center;
-        font-size: 2.5rem;
-        color: #333;
-        margin-bottom: 40px;
+
+.experience-content .experience-item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 400ms;
+}
+
+.experience-item {
+
+    h3 {
+        font-size: 1.5rem;
+        color: black;
     }
 
-    .experience-content {
-        display: flex;
-        flex-direction: column;
+    h4 {
+        font-size: 1.0rem;
+        color: #333;
+        margin: 5px 0;
+    }
 
-        .experience-item {
-            background: #fff;
-            padding: 24px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    p {
+        font-size: 1rem;
+        margin: 10px 0;
+        color: #555;
+    }
 
-            h3 {
-                font-size: 1.5rem;
-                color: black;
-            }
+    ul {
+        margin: 10px 0 0;
+        padding-left: 20px;
 
-            h4 {
-                font-size: 1.2rem;
-                color: #333;
-                margin: 5px 0;
-            }
-
-            p {
-                font-size: 1rem;
-                margin: 10px 0;
-                color: #555;
-            }
-
-            ul {
-                margin: 10px 0 0;
-                padding-left: 20px;
-
-                li {
-                    font-size: 1rem;
-                    color: #555;
-                    line-height: 1.5;
-                }
-            }
+        li {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.5;
         }
     }
+
 }
+
+
+
+.experience-content .experience-item:hover {
+    transform: scale(1.1, 1.1);
+}
+
+.experience-content:hover>.experience-item:not(:hover) {
+    filter: blur(4px);
+    transform: scale(0.9, 0.9);
+}
+
+
 
 
 /* responsive media query start */

@@ -280,11 +280,13 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const roles = [
-  "React Developer",
-  "Exploring React Native 📱",
-  "Learning JavaScript More 🔍",
-  "Curious about AI Tools 🤖",
+  "Frontend Dev ⚛️",
+  "Crafting Interfaces with React 📲",
+  "Building Smart UIs with AI 🤖",
+  "Forever Curious 🧠",
 ];
+
+
 
 let index = 0;
 let charIndex = 0;

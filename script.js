@@ -283,7 +283,7 @@ const roles = [
   "React Developer",
   "Exploring React Native 📱",
   "Learning JavaScript More 🔍",
-  "Interested in AI & Machine Learning 🤖",
+  "Curious about AI Tools 🤖",
 ];
 
 let index = 0;

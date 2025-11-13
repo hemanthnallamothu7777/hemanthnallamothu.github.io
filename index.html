@@ -1,698 +1,553 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hemanth Nallamothu</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <script
-      defer
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
-    ></script>
-    <script defer src="script.js"></script>
-  </head>
-  <body>
-    <div class="background-layer"></div>
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-    <div class="orb orb-3"></div>
 
-    <div class="progress-bar"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hemanth Nallamothu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script defer src="script.js"></script>
+</head>
 
-    <header class="site-header">
-      <div class="nav-container">
-        <div class="brand">Hemanth</div>
-        <nav class="desktop-nav" aria-label="Main navigation">
-          <button class="nav-link active" data-target="home">Home</button>
-          <button class="nav-link" data-target="about">About</button>
-          <button class="nav-link" data-target="experience">Experience</button>
-          <button class="nav-link" data-target="education">Education</button>
-          <button class="nav-link" data-target="skills">Skills</button>
-          <button class="nav-link" data-target="works">Works</button>
-          <button class="nav-link" data-target="contact">Contact</button>
-          <span class="nav-indicator"></span>
-        </nav>
-        <button
-          class="menu-toggle"
-          type="button"
-          aria-expanded="false"
-          aria-controls="mobile-menu"
-        >
-          <svg class="icon icon-menu" viewBox="0 0 24 24" aria-hidden="true">
-            <path
-              d="M4 6h16M4 12h16M4 18h16"
-              stroke="currentColor"
-              stroke-width="1.8"
-              stroke-linecap="round"
-            />
-          </svg>
-          <svg class="icon icon-close" viewBox="0 0 24 24" aria-hidden="true">
-            <path
-              d="M6 6l12 12M6 18L18 6"
-              stroke="currentColor"
-              stroke-width="1.8"
-              stroke-linecap="round"
-            />
-          </svg>
-          <span class="sr-only">Toggle navigation</span>
-        </button>
+<body>
+  <!-- Welcome Loader -->
+  <div id="welcome-loader" class="welcome-loader">
+    <div class="loader-content">
+      <div class="loader-spinner">
+        <div class="spinner-circle"></div>
+        <div class="spinner-circle"></div>
+        <div class="spinner-circle"></div>
       </div>
-      <div id="mobile-menu" class="mobile-nav" hidden>
-        <button class="mobile-nav-link" data-target="home">Home</button>
-        <button class="mobile-nav-link" data-target="about">About</button>
-        <button class="mobile-nav-link" data-target="experience">
-          Experience
-        </button>
-        <button class="mobile-nav-link" data-target="education">
-          Education
-        </button>
-        <button class="mobile-nav-link" data-target="skills">Skills</button>
-        <button class="mobile-nav-link" data-target="works">Works</button>
-        <button class="mobile-nav-link" data-target="contact">Contact</button>
-      </div>
-    </header>
+      <h1 class="loader-title">Welcome to the Portfolio</h1>
+      <p class="loader-quote" id="loader-quote"></p>
+      <p class="loader-author" id="loader-author"></p>
+    </div>
+  </div>
 
-    <main>
-      <section id="home" class="hero-section">
-        <div class="hero-content">
-          <p class="hero-subtitle animate-in">Welcome to my portfolio</p>
-          <h4 class="hero-title animate-in delay-1">Hemanth Nallamothu</h4>
-          <p class="hero-role animate-in delay-2">
-            <span id="typing-text"></span>
-          </p>
-          <p class="hero-description animate-in delay-3">
-            Crafting exceptional digital experiences with React &amp; React
-            Native
-          </p>
-          <div class="hero-actions animate-in delay-4">
-            <button class="button button-primary" data-target="contact">
-              Let’s Connect
-              <svg viewBox="0 0 20 20" aria-hidden="true">
-                <path
-                  d="M5 10h10M10 5l5 5-5 5"
-                  stroke="currentColor"
-                  stroke-width="1.6"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  fill="none"
-                />
+  <div class="background-layer"></div>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
+  <div class="progress-bar"></div>
+
+  <header class="site-header">
+    <div class="nav-container">
+      <div class="brand">Hemanth</div>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <button class="nav-link active" data-target="home">Home</button>
+        <button class="nav-link" data-target="about">About</button>
+        <button class="nav-link" data-target="experience">Experience</button>
+        <button class="nav-link" data-target="education">Education</button>
+        <button class="nav-link" data-target="skills">Skills</button>
+        <button class="nav-link" data-target="works">Works</button>
+        <button class="nav-link" data-target="contact">Contact</button>
+        <span class="nav-indicator"></span>
+      </nav>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="icon icon-menu" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+        </svg>
+        <svg class="icon icon-close" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M6 6l12 12M6 18L18 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+        </svg>
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+    </div>
+    <div id="mobile-menu" class="mobile-nav" hidden>
+      <button class="mobile-nav-link" data-target="home">Home</button>
+      <button class="mobile-nav-link" data-target="about">About</button>
+      <button class="mobile-nav-link" data-target="experience">
+        Experience
+      </button>
+      <button class="mobile-nav-link" data-target="education">
+        Education
+      </button>
+      <button class="mobile-nav-link" data-target="skills">Skills</button>
+      <button class="mobile-nav-link" data-target="works">Works</button>
+      <button class="mobile-nav-link" data-target="contact">Contact</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero-section">
+      <div class="hero-content">
+        <p class="hero-subtitle animate-in">Welcome to my portfolio</p>
+        <h4 class="hero-title animate-in delay-1">Hemanth Nallamothu</h4>
+        <p class="hero-role animate-in delay-2">
+          <span id="typing-text"></span>
+        </p>
+        <p class="hero-description animate-in delay-3">
+          Crafting exceptional digital experiences with React &amp; React
+          Native
+        </p>
+        <div class="hero-actions animate-in delay-4">
+          <button class="button button-primary" data-target="contact">
+            Let’s Connect
+            <svg viewBox="0 0 20 20" aria-hidden="true">
+              <path d="M5 10h10M10 5l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" fill="none" />
+            </svg>
+          </button>
+          <button class="button button-secondary" data-target="works">
+            View Work
+          </button>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <div class="scroll-wheel"></div>
+      </div>
+    </section>
+
+    <section id="about" class="section about-section">
+      <div class="container">
+        <h2 class="section-title animate-on-scroll">About Me</h2>
+        <div class="about-grid">
+          <div class="about-text animate-on-scroll" data-delay="0">
+            <p class="about-intro">
+              I’m
+              <span class="text-gradient">Hemanth Nallamothu</span>, a
+              dedicated JavaScript developer focused on building performant,
+              maintainable experiences for the web and mobile.
+            </p>
+            <p class="about-description">
+              I’m driven by a love for technology and continuous learning. I
+              thrive in collaborative environments where product thinkers,
+              designers, and engineers come together to turn ideas into
+              scalable solutions that create real value.
+            </p>
+            <a class="button button-primary download-button"
+              href="https://drive.google.com/file/d/1za6xPVqZ-bHSutP_aGiylfwtVMxsg16P/view?usp=sharing" target="_blank"
+              rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 5v12m0 0l4-4m-4 4l-4-4M5 19h14" stroke="currentColor" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round" />
               </svg>
-            </button>
-            <button class="button button-secondary" data-target="works">
-              View Work
-            </button>
+              Download Resume
+            </a>
+          </div>
+          <div class="experience-card animate-on-scroll" data-delay="100">
+            <div class="experience-header">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 7h16l-2 10H6L4 7zm4 0V4h8v3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" fill="none" />
+              </svg>
+              <h3>Work Experience</h3>
+            </div>
+            <div class="role-block">
+              <p class="experience-role">UI Developer · Space Inventive</p>
+              <p class="experience-company">Sep 2024 – Present · Hyderabad</p>
+              <ul class="experience-list">
+                <li>
+                  Crafting responsive React.js interfaces with Material UI,
+                  Context API, and secure routing.
+                </li>
+                <li>
+                  Integrating REST APIs and WebSockets to deliver real-time
+                  product experiences.
+                </li>
+              </ul>
+            </div>
+            <div class="role-block">
+              <p class="experience-role">
+                Jr Software Developer · CtrlCampus Pvt Ltd
+              </p>
+              <p class="experience-company">Nov 2023 – Sep 2024 · Remote</p>
+              <ul class="experience-list">
+                <li>
+                  Developed React and React Native features with reusable
+                  components and clean architecture.
+                </li>
+                <li>
+                  Collaborated across teams to ship production-ready features
+                  aligned with product goals.
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div class="scroll-indicator">
-          <div class="scroll-wheel"></div>
-        </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="about" class="section about-section">
-        <div class="container">
-          <h2 class="section-title animate-on-scroll">About Me</h2>
-          <div class="about-grid">
-            <div class="about-text animate-on-scroll" data-delay="0">
-              <p class="about-intro">
-                I’m
-                <span class="text-gradient">Hemanth Nallamothu</span>, a
-                dedicated JavaScript developer focused on building performant,
-                maintainable experiences for the web and mobile.
-              </p>
-              <p class="about-description">
-                I’m driven by a love for technology and continuous learning. I
-                thrive in collaborative environments where product thinkers,
-                designers, and engineers come together to turn ideas into
-                scalable solutions that create real value.
-              </p>
-              <a
-                class="button button-primary download-button"
-                href="https://drive.google.com/file/d/1za6xPVqZ-bHSutP_aGiylfwtVMxsg16P/view?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+    <section id="experience" class="section experience-section">
+      <div class="container">
+        <h2 class="section-title animate-on-scroll">Experience</h2>
+        <div class="experience-timeline">
+          <article class="experience-item animate-on-scroll" data-delay="0">
+            <header class="experience-header">
+              <div>
+                <h3>UI Developer</h3>
+                <p class="experience-company">
+                  Space Inventive · Hyderabad, India
+                </p>
+              </div>
+              <span class="experience-date">Sep 2024 – Present</span>
+            </header>
+            <ul class="experience-points">
+              <li>
+                Built and maintained scalable, responsive interfaces with
+                React.js, elevating engagement and performance.
+              </li>
+              <li>
+                Introduced Context API for state management, removing prop
+                drilling and simplifying component communication.
+              </li>
+              <li>
+                Shipped features faster with Material UI, role-based routing,
+                and secure access flows powered by React Router.
+              </li>
+              <li>
+                Integrated REST APIs via Axios and WebSocket channels to keep
+                critical data and notifications in sync in real time.
+              </li>
+              <li>
+                Collaborated across teams, facilitated reviews, and upheld
+                front-end best practices.
+              </li>
+            </ul>
+          </article>
+
+          <article class="experience-item animate-on-scroll" data-delay="120">
+            <header class="experience-header">
+              <div>
+                <h3>Jr Software Developer</h3>
+                <p class="experience-company">
+                  CtrlCampus Pvt Ltd · Remote, India
+                </p>
+              </div>
+              <span class="experience-date">Nov 2023 – Sep 2024</span>
+            </header>
+            <ul class="experience-points">
+              <li>
+                Delivered React and React Native solutions across devices with
+                an emphasis on usability and performance.
+              </li>
+              <li>
+                Built reusable component libraries to improve consistency and
+                accelerate delivery across projects.
+              </li>
+              <li>
+                Partnered with designers and PMs to translate wireframes into
+                high-quality, production-ready code.
+              </li>
+              <li>
+                Extended app capabilities with third-party SDKs and native
+                modules to meet diverse client requirements.
+              </li>
+            </ul>
+          </article>
+
+          <article class="experience-item animate-on-scroll" data-delay="180">
+            <header class="experience-header">
+              <div>
+                <h3>Internship Trainee</h3>
+                <p class="experience-company">
+                  CtrlCampus Pvt Ltd · Remote, India
+                </p>
+              </div>
+              <span class="experience-date">Aug 2023 – Oct 2023</span>
+            </header>
+            <ul class="experience-points">
+              <li>
+                Contributed to front-end deliveries, focusing on responsive
+                React.js interfaces and dynamic UI flows.
+              </li>
+              <li>
+                Integrated API endpoints and collaborated with senior devs to
+                bring features from concept to launch.
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="section education-section">
+      <div class="container">
+        <h2 class="section-title animate-on-scroll">Education</h2>
+        <div class="education-grid">
+          <article class="education-item animate-on-scroll" data-delay="0">
+            <header>
+              <h3>B.Tech · Vidya Jyothi Institute of Technology</h3>
+              <span class="education-date">Jun 2020 – Jun 2024 · Hyderabad</span>
+            </header>
+            <p class="education-meta">CGPA: 8.03</p>
+            <p class="education-description">
+              Completed Bachelor of Technology with a strong foundation in
+              software development, problem solving, and engineering
+              fundamentals.
+            </p>
+          </article>
+          <article class="education-item animate-on-scroll" data-delay="120">
+            <header>
+              <h3>Intermediate · Sri Chaitanya Junior College</h3>
+              <span class="education-date">Jun 2018 – Mar 2020 · Khammam</span>
+            </header>
+            <p class="education-meta">Percentage: 94%</p>
+            <p class="education-description">
+              Focused on core science and mathematics curriculum that laid the
+              groundwork for advanced studies in engineering.
+            </p>
+          </article>
+          <article class="education-item animate-on-scroll" data-delay="180">
+            <header>
+              <h3>Schooling · Madhu Vidyalayam</h3>
+              <span class="education-date">Jun 2017 – Jun 2018 · Khammam</span>
+            </header>
+            <p class="education-meta">CGPA: 8.8</p>
+            <p class="education-description">
+              Built a strong academic base and nurtured curiosity for
+              technology through extracurricular and academic achievements.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section skills-section">
+      <div class="container">
+        <h2 class="section-title animate-on-scroll">
+          Skills &amp; Expertise
+        </h2>
+        <div class="skills-grid skills-logos">
+          <figure class="skill-card animate-on-scroll">
+            <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+              alt="HTML5 logo" loading="lazy" />
+            <figcaption>HTML5</figcaption>
+          </figure>
+          <figure class="skill-card animate-on-scroll" data-delay="80">
+            <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+              alt="CSS3 logo" loading="lazy" />
+            <figcaption>CSS3</figcaption>
+          </figure>
+          <figure class="skill-card animate-on-scroll" data-delay="120">
+            <img class="skill-logo"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+              alt="JavaScript logo" loading="lazy" />
+            <figcaption>JavaScript</figcaption>
+          </figure>
+          <figure class="skill-card animate-on-scroll" data-delay="160">
+            <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+              alt="React logo" loading="lazy" />
+            <figcaption>React</figcaption>
+          </figure>
+          <figure class="skill-card animate-on-scroll" data-delay="200">
+            <img class="skill-logo"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg"
+              alt="React Native logo" loading="lazy" />
+            <figcaption>React Native</figcaption>
+          </figure>
+          <figure class="skill-card animate-on-scroll" data-delay="240">
+            <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-plain.svg"
+              alt="Git logo" loading="lazy" />
+            <figcaption>Git</figcaption>
+          </figure>
+          <figure class="skill-card animate-on-scroll" data-delay="280">
+            <img class="skill-logo"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+              alt="Bootstrap logo" loading="lazy" />
+            <figcaption>Bootstrap</figcaption>
+          </figure>
+          <figure class="skill-card animate-on-scroll" data-delay="320">
+            <img class="skill-logo"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg"
+              alt="Material UI logo" loading="lazy" />
+            <figcaption>Material UI</figcaption>
+          </figure>
+        </div>
+
+        <div class="tools-panel animate-on-scroll" data-delay="360">
+          <h3>Tools</h3>
+          <div class="tag-list tools-list">
+            <span>GitHub</span>
+            <span>Visual Studio Code</span>
+            <span>Postman</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="works" class="section works-section">
+      <div class="container">
+        <h2 class="section-title animate-on-scroll">Featured Works</h2>
+        <div class="works-grid">
+          <article class="project-card animate-on-scroll" style="--gradient-start: #3b82f6; --gradient-end: #0ea5e9">
+            <div class="project-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M8 5h10a1 1 0 011 1v12a1 1 0 01-1 1H6a1 1 0 01-1-1V7l3-2z" stroke="currentColor"
+                  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                <path d="M12 10h4m-4 4h4m-8 0h.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+            </div>
+            <h3>Talliant · AI HR Automation</h3>
+            <p>
+              SaaS platform that lets HR teams design automated recruitment
+              workflows for outreach, screening, and interview coordination
+              using AI agents.
+            </p>
+            <div class="tag-list">
+              <span>React</span>
+              <span>Context API</span>
+              <span>Material UI</span>
+              <span>Recharts</span>
+            </div>
+          </article>
+
+          <article class="project-card animate-on-scroll" style="--gradient-start: #22c55e; --gradient-end: #0ea5e9">
+            <div class="project-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 4h10l3 4v10a2 2 0 01-2 2H6a2 2 0 01-2-2V8l3-4z" stroke="currentColor" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                <path d="M12 11v4m0 0l2-2m-2 2l-2-2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+            <h3>CtrlCampus · School Management</h3>
+            <p>
+              Unified platform for attendance, grading, and scheduling that
+              streamlines collaboration among students, teachers, and
+              administrators.
+            </p>
+            <div class="tag-list">
+              <span>React</span>
+              <span>Redux</span>
+              <span>JavaScript</span>
+              <span>Bootstrap</span>
+            </div>
+          </article>
+          <article class="project-card animate-on-scroll" style="--gradient-start: #f97316; --gradient-end: #ef4444">
+            <div class="project-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 5h14v12H5z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" fill="none" />
+                <path d="M9 5v14m6-14v14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+            </div>
+            <h3>Recipe Management System</h3>
+            <p>
+              Full-stack application to organise, search, and manage recipes
+              with ingredient tracking, authentication, and rich filtering.
+            </p>
+            <div class="tag-list">
+              <span>React</span>
+              <span>Node.js</span>
+              <span>Express</span>
+              <span>MongoDB</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <h2 class="section-title animate-on-scroll">Let’s Work Together</h2>
+        <p class="section-subtitle animate-on-scroll" data-delay="100">
+          Have a project in mind? Let’s create something amazing.
+        </p>
+        <div class="contact-grid">
+          <div class="contact-card animate-on-scroll" data-delay="0">
+            <h3>Contact Information</h3>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 4h16v16H4z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" fill="none" />
+                  <path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div>
+                <p class="label">Email</p>
+                <a class="value link" href="mailto:hemanth.nallamothu7@gmail.com">
+                  hemanth.nallamothu7@gmail.com
+                </a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path
-                    d="M12 5v12m0 0l4-4m-4 4l-4-4M5 19h14"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
+                    d="M6.6 4.8h2.4l1.2 3.6-2.1 1.2a12 12 0 005 5l1.2-2.1 3.6 1.2v2.4c0 .66-.54 1.2-1.2 1.2a11 11 0 01-11-11c0-.66.54-1.2 1.2-1.2z"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                    fill="none" />
                 </svg>
-                Download Resume
+              </div>
+              <div>
+                <p class="label">Phone</p>
+                <a class="value link" href="tel:+919392790578">
+                  +91 93927 90578
+                </a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 21c4.97-4.438 8-7.802 8-11a8 8 0 10-16 0c0 3.198 3.03 6.562 8 11z" stroke="currentColor"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                  <circle cx="12" cy="10" r="2" fill="currentColor" />
+                </svg>
+              </div>
+              <div>
+                <p class="label">Location</p>
+                <p class="value">Hyderabad</p>
+              </div>
+            </div>
+            <div class="social-links">
+              <a href="https://www.linkedin.com/in/hemanth-nallamothu-b770a422b/" class="social-link" target="_blank"
+                rel="noopener noreferrer" style="--gradient-start: #3b82f6; --gradient-end: #2563eb">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M6.5 9h3v9h-3zm1.5-4a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM10.5 9h2.8l.2 1h.1c.5-.8 1.5-1.3 2.6-1.3 2.8 0 3.3 1.8 3.3 4.1V18h-3v-4c0-1 0-2.2-1.4-2.2-1.4 0-1.6 1.1-1.6 2.1V18h-3V9z"
+                    fill="currentColor" />
+                </svg>
+              </a>
+              <a href="https://github.com/hemanthnallamothu7777" class="social-link" target="_blank"
+                rel="noopener noreferrer" style="--gradient-start: #4b5563; --gradient-end: #1f2937">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12a10 10 0 006.84 9.51c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.12-1.47-1.12-1.47-.92-.63.07-.62.07-.62 1.02.07 1.55 1.04 1.55 1.04.9 1.55 2.36 1.1 2.94.84.09-.65.35-1.1.62-1.35-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.03a9.56 9.56 0 012.5-.34c.85 0 1.7.11 2.5.34 1.9-1.3 2.74-1.03 2.74-1.03.55 1.37.2 2.39.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.86v2.76c0 .26.18.58.69.48A10 10 0 0022 12c0-5.52-4.48-10-10-10z"
+                    fill="currentColor" />
+                </svg>
               </a>
             </div>
-            <div class="experience-card animate-on-scroll" data-delay="100">
-              <div class="experience-header">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path
-                    d="M4 7h16l-2 10H6L4 7zm4 0V4h8v3"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    fill="none"
-                  />
-                </svg>
-                <h3>Work Experience</h3>
-              </div>
-              <div class="role-block">
-                <p class="experience-role">UI Developer · Space Inventive</p>
-                <p class="experience-company">Sep 2024 – Present · Hyderabad</p>
-                <ul class="experience-list">
-                  <li>
-                    Crafting responsive React.js interfaces with Material UI,
-                    Context API, and secure routing.
-                  </li>
-                  <li>
-                    Integrating REST APIs and WebSockets to deliver real-time
-                    product experiences.
-                  </li>
-                </ul>
-              </div>
-              <div class="role-block">
-                <p class="experience-role">
-                  Jr Software Developer · CtrlCampus Pvt Ltd
-                </p>
-                <p class="experience-company">Nov 2023 – Sep 2024 · Remote</p>
-                <ul class="experience-list">
-                  <li>
-                    Developed React and React Native features with reusable
-                    components and clean architecture.
-                  </li>
-                  <li>
-                    Collaborated across teams to ship production-ready features
-                    aligned with product goals.
-                  </li>
-                </ul>
-              </div>
+          </div>
+
+          <form class="contact-form animate-on-scroll" novalidate>
+            <div class="form-field">
+              <input type="text" name="name" placeholder="Your Name" />
+              <p class="field-error" data-error-for="name"></p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="experience" class="section experience-section">
-        <div class="container">
-          <h2 class="section-title animate-on-scroll">Experience</h2>
-          <div class="experience-timeline">
-            <article class="experience-item animate-on-scroll" data-delay="0">
-              <header class="experience-header">
-                <div>
-                  <h3>UI Developer</h3>
-                  <p class="experience-company">
-                    Space Inventive · Hyderabad, India
-                  </p>
-                </div>
-                <span class="experience-date">Sep 2024 – Present</span>
-              </header>
-              <ul class="experience-points">
-                <li>
-                  Built and maintained scalable, responsive interfaces with
-                  React.js, elevating engagement and performance.
-                </li>
-                <li>
-                  Introduced Context API for state management, removing prop
-                  drilling and simplifying component communication.
-                </li>
-                <li>
-                  Shipped features faster with Material UI, role-based routing,
-                  and secure access flows powered by React Router.
-                </li>
-                <li>
-                  Integrated REST APIs via Axios and WebSocket channels to keep
-                  critical data and notifications in sync in real time.
-                </li>
-                <li>
-                  Collaborated across teams, facilitated reviews, and upheld
-                  front-end best practices.
-                </li>
-              </ul>
-            </article>
-
-            <article class="experience-item animate-on-scroll" data-delay="120">
-              <header class="experience-header">
-                <div>
-                  <h3>Jr Software Developer</h3>
-                  <p class="experience-company">
-                    CtrlCampus Pvt Ltd · Remote, India
-                  </p>
-                </div>
-                <span class="experience-date">Nov 2023 – Sep 2024</span>
-              </header>
-              <ul class="experience-points">
-                <li>
-                  Delivered React and React Native solutions across devices with
-                  an emphasis on usability and performance.
-                </li>
-                <li>
-                  Built reusable component libraries to improve consistency and
-                  accelerate delivery across projects.
-                </li>
-                <li>
-                  Partnered with designers and PMs to translate wireframes into
-                  high-quality, production-ready code.
-                </li>
-                <li>
-                  Extended app capabilities with third-party SDKs and native
-                  modules to meet diverse client requirements.
-                </li>
-              </ul>
-            </article>
-
-            <article class="experience-item animate-on-scroll" data-delay="180">
-              <header class="experience-header">
-                <div>
-                  <h3>Internship Trainee</h3>
-                  <p class="experience-company">
-                    CtrlCampus Pvt Ltd · Remote, India
-                  </p>
-                </div>
-                <span class="experience-date">Aug 2023 – Oct 2023</span>
-              </header>
-              <ul class="experience-points">
-                <li>
-                  Contributed to front-end deliveries, focusing on responsive
-                  React.js interfaces and dynamic UI flows.
-                </li>
-                <li>
-                  Integrated API endpoints and collaborated with senior devs to
-                  bring features from concept to launch.
-                </li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="education" class="section education-section">
-        <div class="container">
-          <h2 class="section-title animate-on-scroll">Education</h2>
-          <div class="education-grid">
-            <article class="education-item animate-on-scroll" data-delay="0">
-              <header>
-                <h3>B.Tech · Vidya Jyothi Institute of Technology</h3>
-                <span class="education-date"
-                  >Jun 2020 – Jun 2024 · Hyderabad</span
-                >
-              </header>
-              <p class="education-meta">CGPA: 8.03</p>
-              <p class="education-description">
-                Completed Bachelor of Technology with a strong foundation in
-                software development, problem solving, and engineering
-                fundamentals.
-              </p>
-            </article>
-            <article class="education-item animate-on-scroll" data-delay="120">
-              <header>
-                <h3>Intermediate · Sri Chaitanya Junior College</h3>
-                <span class="education-date"
-                  >Jun 2018 – Mar 2020 · Khammam</span
-                >
-              </header>
-              <p class="education-meta">Percentage: 94%</p>
-              <p class="education-description">
-                Focused on core science and mathematics curriculum that laid the
-                groundwork for advanced studies in engineering.
-              </p>
-            </article>
-            <article class="education-item animate-on-scroll" data-delay="180">
-              <header>
-                <h3>Schooling · Madhu Vidyalayam</h3>
-                <span class="education-date"
-                  >Jun 2017 – Jun 2018 · Khammam</span
-                >
-              </header>
-              <p class="education-meta">CGPA: 8.8</p>
-              <p class="education-description">
-                Built a strong academic base and nurtured curiosity for
-                technology through extracurricular and academic achievements.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="skills" class="section skills-section">
-        <div class="container">
-          <h2 class="section-title animate-on-scroll">
-            Skills &amp; Expertise
-          </h2>
-          <div class="skills-grid skills-logos">
-            <figure class="skill-card animate-on-scroll">
-              <img
-                class="skill-logo"
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-                alt="HTML5 logo"
-                loading="lazy"
-              />
-              <figcaption>HTML5</figcaption>
-            </figure>
-            <figure class="skill-card animate-on-scroll" data-delay="80">
-              <img
-                class="skill-logo"
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-                alt="CSS3 logo"
-                loading="lazy"
-              />
-              <figcaption>CSS3</figcaption>
-            </figure>
-            <figure class="skill-card animate-on-scroll" data-delay="120">
-              <img
-                class="skill-logo"
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                alt="JavaScript logo"
-                loading="lazy"
-              />
-              <figcaption>JavaScript</figcaption>
-            </figure>
-            <figure class="skill-card animate-on-scroll" data-delay="160">
-              <img
-                class="skill-logo"
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-                alt="React logo"
-                loading="lazy"
-              />
-              <figcaption>React</figcaption>
-            </figure>
-            <figure class="skill-card animate-on-scroll" data-delay="200">
-              <img
-                class="skill-logo"
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg"
-                alt="React Native logo"
-                loading="lazy"
-              />
-              <figcaption>React Native</figcaption>
-            </figure>
-            <figure class="skill-card animate-on-scroll" data-delay="240">
-              <img
-                class="skill-logo"
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-plain.svg"
-                alt="Git logo"
-                loading="lazy"
-              />
-              <figcaption>Git</figcaption>
-            </figure>
-            <figure class="skill-card animate-on-scroll" data-delay="280">
-              <img
-                class="skill-logo"
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
-                alt="Bootstrap logo"
-                loading="lazy"
-              />
-              <figcaption>Bootstrap</figcaption>
-            </figure>
-            <figure class="skill-card animate-on-scroll" data-delay="320">
-              <img
-                class="skill-logo"
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg"
-                alt="Material UI logo"
-                loading="lazy"
-              />
-              <figcaption>Material UI</figcaption>
-            </figure>
-          </div>
-
-          <div class="tools-panel animate-on-scroll" data-delay="360">
-            <h3>Tools</h3>
-            <div class="tag-list tools-list">
-              <span>GitHub</span>
-              <span>Visual Studio Code</span>
-              <span>Postman</span>
+            <div class="form-field">
+              <input type="email" name="email" placeholder="Your Email" />
+              <p class="field-error" data-error-for="email"></p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="works" class="section works-section">
-        <div class="container">
-          <h2 class="section-title animate-on-scroll">Featured Works</h2>
-          <div class="works-grid">
-            <article
-              class="project-card animate-on-scroll"
-              style="--gradient-start: #3b82f6; --gradient-end: #0ea5e9"
-            >
-              <div class="project-icon">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path
-                    d="M8 5h10a1 1 0 011 1v12a1 1 0 01-1 1H6a1 1 0 01-1-1V7l3-2z"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    fill="none"
-                  />
-                  <path
-                    d="M12 10h4m-4 4h4m-8 0h.01"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                  />
-                </svg>
-              </div>
-              <h3>Talliant · AI HR Automation</h3>
-              <p>
-                SaaS platform that lets HR teams design automated recruitment
-                workflows for outreach, screening, and interview coordination
-                using AI agents.
-              </p>
-              <div class="tag-list">
-                <span>React</span>
-                <span>Context API</span>
-                <span>Material UI</span>
-                <span>Recharts</span>
-              </div>
-            </article>
-
-            <article
-              class="project-card animate-on-scroll"
-              style="--gradient-start: #22c55e; --gradient-end: #0ea5e9"
-            >
-              <div class="project-icon">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path
-                    d="M7 4h10l3 4v10a2 2 0 01-2 2H6a2 2 0 01-2-2V8l3-4z"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    fill="none"
-                  />
-                  <path
-                    d="M12 11v4m0 0l2-2m-2 2l-2-2"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </div>
-              <h3>CtrlCampus · School Management</h3>
-              <p>
-                Unified platform for attendance, grading, and scheduling that
-                streamlines collaboration among students, teachers, and
-                administrators.
-              </p>
-              <div class="tag-list">
-                <span>React</span>
-                <span>Redux</span>
-                <span>JavaScript</span>
-                <span>Bootstrap</span>
-              </div>
-            </article>
-            <article
-              class="project-card animate-on-scroll"
-              style="--gradient-start: #f97316; --gradient-end: #ef4444"
-            >
-              <div class="project-icon">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path
-                    d="M5 5h14v12H5z"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    fill="none"
-                  />
-                  <path
-                    d="M9 5v14m6-14v14"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                  />
-                </svg>
-              </div>
-              <h3>Recipe Management System</h3>
-              <p>
-                Full-stack application to organise, search, and manage recipes
-                with ingredient tracking, authentication, and rich filtering.
-              </p>
-              <div class="tag-list">
-                <span>React</span>
-                <span>Node.js</span>
-                <span>Express</span>
-                <span>MongoDB</span>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="section contact-section">
-        <div class="container">
-          <h2 class="section-title animate-on-scroll">Let’s Work Together</h2>
-          <p class="section-subtitle animate-on-scroll" data-delay="100">
-            Have a project in mind? Let’s create something amazing.
-          </p>
-          <div class="contact-grid">
-            <div class="contact-card animate-on-scroll" data-delay="0">
-              <h3>Contact Information</h3>
-              <div class="contact-item">
-                <div class="contact-icon">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path
-                      d="M4 4h16v16H4z"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      fill="none"
-                    />
-                    <path
-                      d="M4 7l8 6 8-6"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </div>
-                <div>
-                  <p class="label">Email</p>
-                  <a
-                    class="value link"
-                    href="mailto:hemanth.nallamothu7@gmail.com"
-                  >
-                    hemanth.nallamothu7@gmail.com
-                  </a>
-                </div>
-              </div>
-              <div class="contact-item">
-                <div class="contact-icon">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path
-                      d="M6.6 4.8h2.4l1.2 3.6-2.1 1.2a12 12 0 005 5l1.2-2.1 3.6 1.2v2.4c0 .66-.54 1.2-1.2 1.2a11 11 0 01-11-11c0-.66.54-1.2 1.2-1.2z"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      fill="none"
-                    />
-                  </svg>
-                </div>
-                <div>
-                  <p class="label">Phone</p>
-                  <a class="value link" href="tel:+919392790578">
-                    +91 93927 90578
-                  </a>
-                </div>
-              </div>
-              <div class="contact-item">
-                <div class="contact-icon">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path
-                      d="M12 21c4.97-4.438 8-7.802 8-11a8 8 0 10-16 0c0 3.198 3.03 6.562 8 11z"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      fill="none"
-                    />
-                    <circle cx="12" cy="10" r="2" fill="currentColor" />
-                  </svg>
-                </div>
-                <div>
-                  <p class="label">Location</p>
-                  <p class="value">Hyderabad</p>
-                </div>
-              </div>
-              <div class="social-links">
-                <a
-                  href="https://www.linkedin.com/in/hemanth-nallamothu-b770a422b/"
-                  class="social-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style="--gradient-start: #3b82f6; --gradient-end: #2563eb"
-                >
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path
-                      d="M6.5 9h3v9h-3zm1.5-4a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM10.5 9h2.8l.2 1h.1c.5-.8 1.5-1.3 2.6-1.3 2.8 0 3.3 1.8 3.3 4.1V18h-3v-4c0-1 0-2.2-1.4-2.2-1.4 0-1.6 1.1-1.6 2.1V18h-3V9z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </a>
-                <a
-                  href="https://github.com/hemanthnallamothu7777"
-                  class="social-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style="--gradient-start: #4b5563; --gradient-end: #1f2937"
-                >
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path
-                      d="M12 2C6.48 2 2 6.48 2 12a10 10 0 006.84 9.51c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.12-1.47-1.12-1.47-.92-.63.07-.62.07-.62 1.02.07 1.55 1.04 1.55 1.04.9 1.55 2.36 1.1 2.94.84.09-.65.35-1.1.62-1.35-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.03a9.56 9.56 0 012.5-.34c.85 0 1.7.11 2.5.34 1.9-1.3 2.74-1.03 2.74-1.03.55 1.37.2 2.39.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.86v2.76c0 .26.18.58.69.48A10 10 0 0022 12c0-5.52-4.48-10-10-10z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </a>
-              </div>
+            <div class="form-field">
+              <textarea name="message" placeholder="Your Message" rows="5"></textarea>
+              <p class="field-error" data-error-for="message"></p>
             </div>
-
-            <form class="contact-form animate-on-scroll" novalidate>
-              <div class="form-field">
-                <input type="text" name="name" placeholder="Your Name" />
-                <p class="field-error" data-error-for="name"></p>
-              </div>
-              <div class="form-field">
-                <input type="email" name="email" placeholder="Your Email" />
-                <p class="field-error" data-error-for="email"></p>
-              </div>
-              <div class="form-field">
-                <textarea
-                  name="message"
-                  placeholder="Your Message"
-                  rows="5"
-                ></textarea>
-                <p class="field-error" data-error-for="message"></p>
-              </div>
-              <button type="submit" class="button button-primary full-width">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path
-                    d="M4 4l16 8-16 8 4-8-4-8z"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    fill="none"
-                  />
-                </svg>
-                Send Message
-              </button>
-              <div class="form-status" aria-live="polite"></div>
-            </form>
-          </div>
+            <button type="submit" class="button button-primary full-width">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 4l16 8-16 8 4-8-4-8z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" fill="none" />
+              </svg>
+              Send Message
+            </button>
+            <div class="form-status" aria-live="polite"></div>
+          </form>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
+  </main>
 
-    <footer class="site-footer">
-      <p>© 2025 Hemanth Nallamothu. Crafted with passion and innovation.</p>
-    </footer>
-  </body>
+  <footer class="site-footer">
+    <p>© 2025 Hemanth Nallamothu. Crafted with passion and innovation.</p>
+  </footer>
+</body>
+
 </html>

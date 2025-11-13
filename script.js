@@ -2,7 +2,106 @@ const EMAILJS_SERVICE_ID = "service_mc2ytxu";
 const EMAILJS_TEMPLATE_ID = "template_bbyl4kk";
 const EMAILJS_PUBLIC_KEY = "OjvQgapFyjPdambv6";
 
+// Collection of inspirational quotes
+const quotes = [
+  {
+    text: "The only way to do great work is to love what you do.",
+    author: "Steve Jobs"
+  },
+  {
+    text: "Code is like humor. When you have to explain it, it's bad.",
+    author: "Cory House"
+  },
+  {
+    text: "First, solve the problem. Then, write the code.",
+    author: "John Johnson"
+  },
+  {
+    text: "Experience is the name everyone gives to their mistakes.",
+    author: "Oscar Wilde"
+  },
+  {
+    text: "In order to be irreplaceable, one must always be different.",
+    author: "Coco Chanel"
+  },
+  {
+    text: "Java is to JavaScript what car is to Carpet.",
+    author: "Chris Heilmann"
+  },
+  {
+    text: "Sometimes it pays to stay in bed on Monday, rather than spending the rest of the week debugging Monday's code.",
+    author: "Christopher Thompson"
+  },
+  {
+    text: "Perfection is achieved not when there is nothing more to add, but rather when there is nothing more to take away.",
+    author: "Antoine de Saint-Exupery"
+  },
+  {
+    text: "Any fool can write code that a computer can understand. Good programmers write code that humans can understand.",
+    author: "Martin Fowler"
+  },
+  {
+    text: "Programs must be written for people to read, and only incidentally for machines to execute.",
+    author: "Harold Abelson"
+  },
+  {
+    text: "The best way to get a project done faster is to start sooner.",
+    author: "Jim Highsmith"
+  },
+  {
+    text: "The most disastrous thing that you can ever learn is your first programming language.",
+    author: "Alan Kay"
+  },
+  {
+    text: "Simplicity is the ultimate sophistication.",
+    author: "Leonardo da Vinci"
+  },
+  {
+    text: "Innovation distinguishes between a leader and a follower.",
+    author: "Steve Jobs"
+  },
+  {
+    text: "The future belongs to those who believe in the beauty of their dreams.",
+    author: "Eleanor Roosevelt"
+  }
+];
+
+// Function to get a random quote
+function getRandomQuote() {
+  const randomIndex = Math.floor(Math.random() * quotes.length);
+  return quotes[randomIndex];
+}
+
 document.addEventListener("DOMContentLoaded", () => {
+  // Welcome Loader
+  const welcomeLoader = document.getElementById("welcome-loader");
+  const loaderQuote = document.getElementById("loader-quote");
+  const loaderAuthor = document.getElementById("loader-author");
+  const body = document.body;
+
+  // Show loader initially and set random quote
+  if (welcomeLoader) {
+    // Get and display random quote
+    if (loaderQuote && loaderAuthor) {
+      const randomQuote = getRandomQuote();
+      loaderQuote.textContent = `"${randomQuote.text}"`;
+      loaderAuthor.textContent = `— ${randomQuote.author}`;
+    }
+
+    body.classList.add("loading");
+
+    // Hide loader after animation completes
+    setTimeout(() => {
+      welcomeLoader.classList.add("hidden");
+      body.classList.remove("loading");
+
+      // Remove loader from DOM after transition
+      setTimeout(() => {
+        welcomeLoader.style.display = "none";
+      }, 800);
+    }, 4000); // Show for 4 seconds
+  }
+
   const progressBar = document.querySelector(".progress-bar");
   const menuToggle = document.querySelector(".menu-toggle");
   const mobileMenu = document.getElementById("mobile-menu");
@@ -285,8 +384,6 @@ const roles = [
   "Building Smart UIs with AI 🤖",
   "Forever Curious 🧠",
 ];
-
-
 
 let index = 0;
 let charIndex = 0;
